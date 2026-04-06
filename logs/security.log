@@ -1,0 +1,181 @@
+{"user": "person2", "status": "allowed", "risk_level": "LOW", "decision_reason": "Request passed all security checks.", "prediction": "German shepherd", "timestamp": "2026-04-06 20:26:59 India Standard Time", "filename": "20260406202656_guarddog.jpg"}
+Starting secure ML web interface
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+Starting secure ML web interface
+ * Debugger is active!
+ * Debugger PIN: 126-155-015
+127.0.0.1 - - [06/Apr/2026 20:29:53] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:29:53] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:29:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [06/Apr/2026 20:30:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+127.0.0.1 - - [06/Apr/2026 20:30:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:30:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "HIGH", "decision_reason": "Adversarial input detected.", "prediction": null, "timestamp": "2026-04-06 20:30:25 India Standard Time", "filename": "20260406203022_cat.jpg"}
+127.0.0.1 - - [06/Apr/2026 20:30:25] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:30:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "HIGH", "decision_reason": "Adversarial input detected.", "prediction": null, "timestamp": "2026-04-06 20:30:39 India Standard Time", "filename": "20260406203038_dog_goldenRetriever.jpg"}
+127.0.0.1 - - [06/Apr/2026 20:30:39] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:30:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "HIGH", "decision_reason": "Adversarial input detected.", "prediction": null, "timestamp": "2026-04-06 20:30:49 India Standard Time", "filename": "20260406203048_goofytails.jpeg"}
+127.0.0.1 - - [06/Apr/2026 20:30:49] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:30:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "allowed", "risk_level": "LOW", "decision_reason": "Request passed all security checks.", "prediction": "German shepherd", "timestamp": "2026-04-06 20:31:05 India Standard Time", "filename": "20260406203104_guarddog.jpg"}
+127.0.0.1 - - [06/Apr/2026 20:31:05] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:31:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "allowed", "risk_level": "LOW", "decision_reason": "Request passed all security checks.", "prediction": "German shepherd", "timestamp": "2026-04-06 20:31:26 India Standard Time", "filename": "20260406203125_guarddog.jpg"}
+127.0.0.1 - - [06/Apr/2026 20:31:26] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:31:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "HIGH", "decision_reason": "Adversarial input detected.", "prediction": null, "timestamp": "2026-04-06 20:31:36 India Standard Time", "filename": "20260406203136_noisycat.jpg"}
+127.0.0.1 - - [06/Apr/2026 20:31:36] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:31:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "HIGH", "decision_reason": "Adversarial input detected.", "prediction": null, "timestamp": "2026-04-06 20:31:50 India Standard Time", "filename": "20260406203149_noise.jpg"}
+127.0.0.1 - - [06/Apr/2026 20:31:50] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:31:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "allowed", "risk_level": "LOW", "decision_reason": "Request passed all security checks.", "prediction": "German shepherd", "timestamp": "2026-04-06 20:32:02 India Standard Time", "filename": "20260406203201_noisydog.jpg"}
+127.0.0.1 - - [06/Apr/2026 20:32:02] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:32:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "CRITICAL", "decision_reason": "Integrity check failed for: Detection/predictor.py", "prediction": null, "timestamp": "2026-04-06 20:49:14 India Standard Time", "filename": null}
+Exception on /analyze [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\OneDrive\Desktop\Disha\miniproject\app.py", line 137, in analyze
+    return render_template("index.html", result=result, selected_image_url=None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\user\OneDrive\Desktop\Disha\miniproject\templates\index.html", line 212, in top-level template code
+    {{ '%.2f'|format(result.confidence * 100) }}%
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'confidence'
+{"user": "person1", "status": "blocked", "risk_level": "CRITICAL", "decision_reason": "Integrity check failed for: Detection/predictor.py", "prediction": null, "timestamp": "2026-04-06 20:49:24 India Standard Time", "filename": null}
+{"user": "person1", "status": "blocked", "risk_level": "CRITICAL", "decision_reason": "Integrity check failed for: Detection/predictor.py", "prediction": null, "timestamp": "2026-04-06 20:49:46 India Standard Time", "filename": null}
+Starting secure ML web interface
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+Starting secure ML web interface
+ * Debugger is active!
+ * Debugger PIN: 126-155-015
+127.0.0.1 - - [06/Apr/2026 20:50:40] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:50:40] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:50:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [06/Apr/2026 20:50:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+127.0.0.1 - - [06/Apr/2026 20:50:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:50:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "CRITICAL", "decision_reason": "Integrity check failed for: Detection/predictor.py", "prediction": null, "timestamp": "2026-04-06 20:51:07 India Standard Time", "filename": null}
+127.0.0.1 - - [06/Apr/2026 20:51:07] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:51:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "CRITICAL", "decision_reason": "Integrity check failed for: Detection/predictor.py", "prediction": null, "timestamp": "2026-04-06 20:51:45 India Standard Time", "filename": null}
+127.0.0.1 - - [06/Apr/2026 20:51:45] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:51:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "CRITICAL", "decision_reason": "Integrity check failed for: Detection/predictor.py", "prediction": null, "timestamp": "2026-04-06 20:52:02 India Standard Time", "filename": null}
+127.0.0.1 - - [06/Apr/2026 20:52:02] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:52:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "CRITICAL", "decision_reason": "Integrity check failed for: Detection/predictor.py", "prediction": null, "timestamp": "2026-04-06 20:52:15 India Standard Time", "filename": null}
+127.0.0.1 - - [06/Apr/2026 20:52:15] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:52:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "CRITICAL", "decision_reason": "Integrity check failed for: Detection/predictor.py", "prediction": null, "timestamp": "2026-04-06 20:52:31 India Standard Time", "filename": null}
+127.0.0.1 - - [06/Apr/2026 20:52:31] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:52:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "CRITICAL", "decision_reason": "Integrity check failed for: Detection/predictor.py", "prediction": null, "timestamp": "2026-04-06 20:52:40 India Standard Time", "filename": null}
+127.0.0.1 - - [06/Apr/2026 20:52:40] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:52:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "CRITICAL", "decision_reason": "Integrity check failed for: Detection/predictor.py", "prediction": null, "timestamp": "2026-04-06 20:52:49 India Standard Time", "filename": null}
+127.0.0.1 - - [06/Apr/2026 20:52:49] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:52:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "HIGH", "decision_reason": "Adversarial input detected.", "prediction": null, "timestamp": "2026-04-06 20:58:25 India Standard Time", "filename": "20260406205827_cat.jpg"}
+{"user": "person1", "status": "blocked", "risk_level": "HIGH", "decision_reason": "Adversarial input detected.", "prediction": null, "timestamp": "2026-04-06 20:58:45 India Standard Time", "filename": "20260406205846_cat.jpg"}
+Starting secure ML web interface
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+Starting secure ML web interface
+ * Debugger is active!
+ * Debugger PIN: 126-155-015
+127.0.0.1 - - [06/Apr/2026 21:03:24] "[31m[1mPOST /analyze HTTP/1.1[0m" 400 -
+127.0.0.1 - - [06/Apr/2026 21:03:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:03:24] "GET /sample-images/cat.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:03:24] "GET /sample-images/goofytails.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:03:24] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:03:24] "GET /sample-images/guarddog.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:03:24] "GET /sample-images/dog_goldenRetriever.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:03:24] "GET /sample-images/noise.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:03:24] "GET /sample-images/noisycat.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:03:24] "GET /sample-images/noisydog.jpg HTTP/1.1" 200 -
+{"user": "person1", "status": "blocked", "risk_level": "HIGH", "decision_reason": "Adversarial input detected.", "prediction": null, "timestamp": "2026-04-06 21:03:39 India Standard Time", "filename": "20260406210344_noisycat.jpg"}
+127.0.0.1 - - [06/Apr/2026 21:03:47] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:03:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:03:47] "[36mGET /sample-images/cat.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:03:47] "[36mGET /sample-images/dog_goldenRetriever.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:03:47] "[36mGET /sample-images/goofytails.jpeg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:03:47] "[36mGET /sample-images/guarddog.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:03:47] "[36mGET /sample-images/noise.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:03:47] "[36mGET /sample-images/noisycat.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:03:47] "[36mGET /sample-images/noisydog.jpg HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "allowed", "risk_level": "LOW", "decision_reason": "Request passed all security checks.", "prediction": "German shepherd", "timestamp": "2026-04-06 21:04:14 India Standard Time", "filename": "20260406210418_guarddog.jpg"}
+127.0.0.1 - - [06/Apr/2026 21:04:20] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:04:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:20] "[36mGET /sample-images/cat.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:20] "[36mGET /sample-images/dog_goldenRetriever.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:20] "[36mGET /sample-images/goofytails.jpeg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:20] "[36mGET /sample-images/guarddog.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:20] "[36mGET /sample-images/noise.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:20] "[36mGET /sample-images/noisycat.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:20] "[36mGET /sample-images/noisydog.jpg HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "HIGH", "decision_reason": "Adversarial input detected.", "prediction": null, "timestamp": "2026-04-06 21:04:36 India Standard Time", "filename": "20260406210442_cat.jpg"}
+127.0.0.1 - - [06/Apr/2026 21:04:43] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:04:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:43] "[36mGET /sample-images/cat.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:43] "[36mGET /sample-images/dog_goldenRetriever.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:43] "[36mGET /sample-images/goofytails.jpeg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:43] "[36mGET /sample-images/guarddog.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:43] "[36mGET /sample-images/noise.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:43] "[36mGET /sample-images/noisycat.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:04:43] "[36mGET /sample-images/noisydog.jpg HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "HIGH", "decision_reason": "Adversarial input detected.", "prediction": null, "timestamp": "2026-04-06 21:05:02 India Standard Time", "filename": "20260406210506_dog_goldenRetriever.jpg"}
+127.0.0.1 - - [06/Apr/2026 21:05:08] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:05:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:08] "[36mGET /sample-images/cat.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:08] "[36mGET /sample-images/dog_goldenRetriever.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:08] "[36mGET /sample-images/goofytails.jpeg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:08] "[36mGET /sample-images/guarddog.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:08] "[36mGET /sample-images/noise.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:08] "[36mGET /sample-images/noisycat.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:08] "[36mGET /sample-images/noisydog.jpg HTTP/1.1[0m" 304 -
+{"user": "person1", "status": "blocked", "risk_level": "HIGH", "decision_reason": "Adversarial input detected.", "prediction": null, "timestamp": "2026-04-06 21:05:35 India Standard Time", "filename": "20260406210540_goofytails.jpeg"}
+127.0.0.1 - - [06/Apr/2026 21:05:42] "POST /analyze HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:05:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:42] "[36mGET /sample-images/cat.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:42] "[36mGET /sample-images/dog_goldenRetriever.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:42] "[36mGET /sample-images/goofytails.jpeg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:42] "[36mGET /sample-images/guarddog.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:42] "[36mGET /sample-images/noise.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:42] "[36mGET /sample-images/noisycat.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:05:42] "[36mGET /sample-images/noisydog.jpg HTTP/1.1[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:06:19] "[32mPOST /logout HTTP/1.1[0m" 302 -
+127.0.0.1 - - [06/Apr/2026 21:06:19] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 21:06:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
